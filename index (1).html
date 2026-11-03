@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="The Capitalism Chronicle — independent coverage of markets, geopolitics, energy and global business.">
+  <title>The Capitalism Chronicle</title>
+  <style>
+    :root{--ink:#101010;--black:#090909;--gold:#d7b65d;--gold-dark:#a88735;--paper:#f4f2ec;--white:#fff;--muted:#77756e;--line:#dedbd2;--soft:#ebe8df;--green:#2c7956;--red:#a63c35;--shadow:0 16px 40px rgba(0,0,0,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}button,input,select,textarea{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{cursor:pointer}.hidden{display:none!important}.wrap{width:min(1220px,calc(100% - 44px));margin:0 auto}
+    .topline{background:#050505;color:#c7c2b5;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.topline .wrap{display:flex;justify-content:space-between;gap:16px;padding:9px 0}.topline strong{color:var(--gold);font-weight:700}
+    .masthead{background:var(--black);color:#fff;border-bottom:1px solid #302817}.masthead-inner{padding:26px 0 21px;text-align:center}.brand-kicker{color:var(--gold);font-size:10px;letter-spacing:.32em;text-transform:uppercase;font-weight:700}.brand{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,5vw,57px);letter-spacing:.035em;line-height:1.08;margin:7px 0 2px;font-weight:700}.brand span{color:var(--gold)}.tagline{color:#bdb8ad;font-family:Georgia,serif;font-style:italic;font-size:14px;letter-spacing:.035em}.nav-bar{background:#111;border-top:1px solid #28241a;border-bottom:3px solid var(--gold)}.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:48px}.nav-links{display:flex;align-items:center;gap:0;overflow:auto;white-space:nowrap}.nav-links a{color:#e5e1d8;padding:14px 15px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;border-bottom:2px solid transparent}.nav-links a:hover,.nav-links a.active{color:var(--gold);border-bottom-color:var(--gold)}.nav-search{display:flex;gap:6px;align-items:center;min-width:190px}.nav-search input{width:100%;min-width:0;background:#222;border:1px solid #494338;color:white;padding:7px 10px;font-size:12px;outline:none}.nav-search button{border:1px solid var(--gold);background:var(--gold);color:#111;font-size:11px;font-weight:800;padding:8px 11px;text-transform:uppercase}
+    .ticker{background:#e9e5d9;border-bottom:1px solid #d5cdbb}.ticker .wrap{display:flex;align-items:center;gap:13px;padding:9px 0;font-size:12px}.ticker-label{background:var(--gold);color:#111;padding:4px 8px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:10px;white-space:nowrap}.ticker-text{font-family:Georgia,serif;font-style:italic;color:#34322d;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    main{min-height:55vh;padding:28px 0 70px}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 0 16px;border-bottom:2px solid var(--ink);padding-bottom:8px}.section-heading h2{font:700 19px Georgia,serif;margin:0;letter-spacing:.02em}.section-heading .eyebrow{font-size:10px;letter-spacing:.14em;color:var(--gold-dark);font-weight:800;text-transform:uppercase}.home-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.85fr);gap:22px}.hero-card{position:relative;min-height:430px;background:#202020;color:#fff;overflow:hidden;display:flex;align-items:flex-end;box-shadow:var(--shadow)}.hero-card .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75}.hero-card:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.83),rgba(0,0,0,.42) 58%,rgba(0,0,0,.08)),linear-gradient(0deg,rgba(0,0,0,.6),transparent 65%)}.hero-copy{position:relative;z-index:1;padding:32px;max-width:690px}.category-label{display:inline-block;background:var(--gold);color:#111;padding:5px 9px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.12em}.hero-copy h1{font:700 clamp(30px,4.2vw,49px)/1.08 Georgia,serif;margin:14px 0 13px;max-width:670px}.hero-copy p{color:#e6e1d7;max-width:620px;margin:0 0 18px;font-size:14px}.byline{font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:#c7c1b4}.byline b{color:var(--gold)}.text-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;color:var(--gold);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.side-stack{display:flex;flex-direction:column;gap:14px}.side-story{display:grid;grid-template-columns:112px 1fr;min-height:126px;background:#fff;border:1px solid var(--line)}.side-story img{width:112px;height:100%;min-height:126px;object-fit:cover;background:#d6d2c8}.side-story-copy{padding:12px}.side-story h3{font:700 16px/1.2 Georgia,serif;margin:7px 0}.side-story .small-cat{font-size:9px;font-weight:900;color:var(--gold-dark);text-transform:uppercase;letter-spacing:.1em}.side-story .byline{color:#79766e;font-size:9px}
+    .latest-section{margin-top:36px}.story-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.story-card{background:#fff;border:1px solid var(--line);transition:transform .18s,box-shadow .18s;min-width:0}.story-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.story-card img{width:100%;height:190px;object-fit:cover;background:#ddd9ce;display:block}.story-card-copy{padding:16px}.story-card h3{font:700 20px/1.18 Georgia,serif;margin:8px 0 9px}.story-card p{color:#5f5c54;font-size:12px;margin:0 0 12px}.story-meta{display:flex;justify-content:space-between;gap:8px;color:#858178;font-size:9px;letter-spacing:.08em;text-transform:uppercase}.story-meta strong{color:var(--gold-dark)}
+    .category-intro{margin-bottom:24px;padding:25px 28px;background:#151515;color:#fff;border-left:5px solid var(--gold)}.category-intro h1{font:700 34px Georgia,serif;margin:0 0 5px}.category-intro p{margin:0;color:#c5c0b5;font-size:13px}.page-title{font:700 34px Georgia,serif;margin:0 0 6px}.muted{color:var(--muted)}.empty-state{border:1px dashed #c7c1b5;background:#efede6;padding:45px 20px;text-align:center;color:#6d685d}.empty-state h3{font:700 22px Georgia,serif;color:#24221e;margin:0 0 8px}.empty-state p{margin:0;font-size:13px}
+    .article-layout{display:grid;grid-template-columns:minmax(0,820px) minmax(220px,1fr);gap:38px;align-items:start}.article-main{background:#fff;border:1px solid var(--line);padding:clamp(20px,4vw,42px)}.article-category{font-size:10px;font-weight:900;color:var(--gold-dark);letter-spacing:.15em;text-transform:uppercase}.article-main h1{font:700 clamp(32px,5vw,52px)/1.05 Georgia,serif;margin:12px 0}.article-excerpt{font:italic 18px/1.5 Georgia,serif;color:#5a574f;border-left:3px solid var(--gold);padding-left:16px;margin:17px 0 22px}.article-meta{display:flex;flex-wrap:wrap;gap:9px 18px;color:#777267;font-size:10px;text-transform:uppercase;letter-spacing:.09em;border-bottom:1px solid var(--line);padding-bottom:17px}.article-cover{width:100%;max-height:470px;object-fit:cover;margin:22px 0 12px;background:#e3dfd4}.article-body{font:17px/1.8 Georgia,serif;color:#27251f}.article-body p{margin:0 0 18px}.article-media{margin-top:26px;display:grid;gap:17px}.article-media img{max-width:100%;max-height:460px;object-fit:contain;background:#eee}.article-media video{width:100%;max-height:520px;background:#111}.file-link{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 13px;color:#29261f;font-size:12px;font-weight:700}.reaction-box{margin-top:32px;padding:20px;background:#f3f0e7;border:1px solid #ded8c8}.reaction-box h3{font:700 18px Georgia,serif;margin:0 0 12px}.reaction-row{display:flex;flex-wrap:wrap;gap:9px}.reaction-btn{border:1px solid #d3cbbb;background:#fff;padding:8px 13px;min-width:72px;display:flex;align-items:center;justify-content:center;gap:8px}.reaction-btn:hover,.reaction-btn.selected{border-color:var(--gold-dark);background:#fff9e8}.reaction-btn .emoji{font-size:21px}.reaction-btn .count{font-size:12px;font-weight:800}.reaction-note{font-size:11px;color:#777267;margin:10px 0 0}.article-aside{position:sticky;top:15px}.aside-box{background:#171717;color:#fff;padding:20px;border-top:4px solid var(--gold)}.aside-box h3{font:700 19px Georgia,serif;margin:0 0 12px}.aside-box p{font-size:12px;color:#c5c0b5;margin:0}.related-item{padding:12px 0;border-top:1px solid #38342b}.related-item a{font:700 14px/1.2 Georgia,serif}.related-item small{display:block;color:var(--gold);font-size:9px;margin-top:6px;text-transform:uppercase;letter-spacing:.1em}
+    footer{background:#090909;color:#ddd8cc;border-top:4px solid var(--gold);padding:35px 0 20px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}.footer-brand{font:700 26px Georgia,serif;color:#fff}.footer-brand span{color:var(--gold)}footer p{font-size:12px;color:#aaa598;max-width:400px}footer h4{color:var(--gold);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin:5px 0 12px}footer a{display:block;color:#d7d1c4;font-size:12px;margin:7px 0}footer a:hover{color:var(--gold)}.footer-bottom{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #302b20;padding-top:16px;margin-top:24px;color:#817c70;font-size:10px}.admin-footer-link{display:inline-block!important;color:var(--gold)!important;border:1px solid #76602d;padding:5px 11px;letter-spacing:.1em;font-weight:800;text-transform:uppercase}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:20;display:flex;align-items:center;justify-content:center;padding:18px;overflow:auto}.modal{width:min(900px,100%);max-height:94vh;overflow:auto;background:var(--paper);box-shadow:0 25px 80px rgba(0,0,0,.4)}.modal-head{background:#0b0b0b;color:white;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--gold)}.modal-head h2{font:700 24px Georgia,serif;margin:0}.modal-head button{background:none;color:#fff;border:1px solid #62532e;padding:5px 10px}.modal-body{padding:24px}.admin-login{max-width:430px;margin:12px auto 28px;text-align:center;background:white;border:1px solid var(--line);padding:30px}.admin-login h3{font:700 25px Georgia,serif;margin:0 0 8px}.admin-login p{font-size:12px;color:#6d685d}.google-btn,.primary-btn,.secondary-btn,.danger-btn{border:0;padding:11px 15px;font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase}.google-btn,.primary-btn{background:var(--gold);color:#111}.google-btn{width:100%;margin-top:13px}.secondary-btn{background:#24221e;color:#fff}.danger-btn{background:#a43c35;color:white}.admin-status{font-size:11px;color:#8a3a31;margin:13px 0}.admin-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}.admin-toolbar h3{font:700 23px Georgia,serif;margin:0}.admin-form{background:#fff;border:1px solid var(--line);padding:20px;margin:18px 0}.admin-form h4{font:700 18px Georgia,serif;margin:0 0 15px}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}.field label{font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#5d594f}.field input,.field select,.field textarea{width:100%;border:1px solid #d6d1c6;background:#fbfaf7;padding:10px 11px;color:#171717;outline:none}.field textarea{min-height:180px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold-dark)}.field small{font-size:10px;color:#777267}.checkline{display:flex;align-items:center;gap:8px;font-size:12px;margin:6px 0 14px}.admin-actions{display:flex;flex-wrap:wrap;gap:9px}.admin-list{display:grid;gap:8px}.admin-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);padding:12px 14px}.admin-row h5{font:700 15px Georgia,serif;margin:0 0 4px}.admin-row small{font-size:10px;color:#777267}.admin-row-actions{display:flex;gap:6px;flex-wrap:wrap}.admin-row-actions button{font-size:9px;padding:7px 9px}.flash{padding:10px 12px;font-size:12px;margin:10px 0;background:#e8efe8;color:#28553a;border:1px solid #c7dac9}.flash.error{background:#f5e7e5;color:#883b34;border-color:#e3c5c1}.setup-warning{padding:16px;background:#fff5db;border:1px solid #e7d29b;color:#493a18;font-size:12px;margin-bottom:14px}.setup-warning code{font-size:11px}.loading{color:#777267;font-size:13px;padding:22px 0}.mobile-menu{display:none}
+    @media(max-width:850px){.home-grid{grid-template-columns:1fr}.hero-card{min-height:380px}.side-stack{display:grid;grid-template-columns:1fr 1fr}.story-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.article-layout{grid-template-columns:1fr}.article-aside{position:static}.footer-grid{grid-template-columns:1fr 1fr}.nav-inner{align-items:stretch;flex-direction:column;gap:0;padding-bottom:9px}.nav-search{padding:0 10px;min-width:0}.nav-links a{padding:12px 10px}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1220px)}.topline .wrap{font-size:9px}.topline .wrap span:last-child{display:none}.masthead-inner{padding:20px 0 16px}.brand{font-size:31px}.tagline{font-size:12px}.nav-links a{font-size:9px;padding:11px 8px}.ticker .wrap{font-size:10px}.hero-card{min-height:410px}.hero-copy{padding:22px}.hero-copy h1{font-size:34px}.side-stack{grid-template-columns:1fr}.story-grid{grid-template-columns:1fr}.story-card img{height:210px}.section-heading h2{font-size:17px}.footer-grid{grid-template-columns:1fr;gap:14px}.footer-bottom{flex-direction:column}.field-grid{grid-template-columns:1fr}.admin-row{grid-template-columns:1fr}.admin-row-actions{justify-content:flex-start}.article-main{padding:20px}.article-main h1{font-size:35px}.reaction-btn{flex:1;min-width:56px}.modal-body{padding:14px}.admin-form{padding:14px}}
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="wrap"><span><strong>THE CAPITALISM CHRONICLE</strong> &nbsp; Independent reporting and analysis</span><span id="today-label">GLOBAL NEWS · MARKETS · IDEAS</span></div></div>
+  <header class="masthead"><div class="wrap masthead-inner"><div class="brand-kicker">The world. The markets. The forces shaping tomorrow.</div><a href="./" class="brand" aria-label="The Capitalism Chronicle homepage">THE CAPITALISM <span>CHRONICLE</span></a><div class="tagline">Clear-eyed coverage of a changing world</div></div></header>
+  <nav class="nav-bar"><div class="wrap nav-inner"><div class="nav-links" id="nav-links"><a href="#" data-category="all" class="active">Home</a><a href="#" data-category="Markets & Economy">Markets & Economy</a><a href="#" data-category="Geopolitics">Geopolitics</a><a href="#" data-category="Energy & Commodities">Energy & Commodities</a><a href="#" data-category="Business & Industry">Business & Industry</a></div><form class="nav-search" id="search-form"><input id="search-input" type="search" placeholder="Search the Chronicle..." aria-label="Search articles"><button type="submit">Search</button></form></div></nav>
+  <div class="ticker"><div class="wrap"><span class="ticker-label">The Briefing</span><span class="ticker-text" id="ticker-text">Independent coverage of the stories moving markets and shaping global affairs.</span></div></div>
+  <main><div class="wrap" id="main-content"><div class="loading">Loading the latest stories...</div></div></main>
+  <footer><div class="wrap"><div class="footer-grid"><div><div class="footer-brand">THE CAPITALISM <span>CHRONICLE</span></div><p>Independent coverage of markets, geopolitics, energy and global business. Focused on the forces that shape economies and influence the world.</p></div><div><h4>Explore</h4><a href="#" data-category="Markets & Economy">Markets & Economy</a><a href="#" data-category="Geopolitics">Geopolitics</a><a href="#" data-category="Energy & Commodities">Energy & Commodities</a><a href="#" data-category="Business & Industry">Business & Industry</a></div><div><h4>About the Chronicle</h4><p>Evidence-led reporting. Clear explanations. A global perspective.</p><a href="#" id="footer-admin" class="admin-footer-link">Admin</a></div></div><div class="footer-bottom"><span>© <span id="year-label"></span> The Capitalism Chronicle. All rights reserved.</span><span>Independent perspective. Informed decisions.</span></div></div></footer>
+
+  <div class="modal-backdrop hidden" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-title"><div class="modal"><div class="modal-head"><h2 id="admin-title">Chronicle Administration</h2><button id="close-admin" type="button" aria-label="Close admin">✕</button></div><div class="modal-body" id="admin-content"></div></div></div>
+
+  <script type="module">
+    import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+    // SETUP: replace these three values before publishing the site.
+    // Use the Supabase Project URL, the public anon/publishable key, and your own Google email.
+    const CONFIG = {
+      SUPABASE_URL: 'YOUR_SUPABASE_PROJECT_URL',
+      SUPABASE_ANON_KEY: 'YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY',
+      ADMIN_EMAIL: 'YOUR_GOOGLE_EMAIL@example.com'
+    };
+
+    const CATEGORIES = ['Markets & Economy','Geopolitics','Energy & Commodities','Business & Industry'];
+    const EMOJIS = ['👍','❤️','😂','😮','😢'];
+    const BUCKET = 'news-media';
+    const isConfigured = CONFIG.SUPABASE_URL.startsWith('https://') && !CONFIG.SUPABASE_URL.includes('YOUR_') && CONFIG.SUPABASE_ANON_KEY.length > 20 && !CONFIG.SUPABASE_ANON_KEY.includes('YOUR_') && CONFIG.ADMIN_EMAIL.includes('@') && !CONFIG.ADMIN_EMAIL.includes('YOUR_');
+    const supabase = isConfigured ? createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY) : null;
+    const main = document.getElementById('main-content');
+    const adminModal = document.getElementById('admin-modal');
+    const adminContent = document.getElementById('admin-content');
+    const state = { articles: [], page: 'home', category: 'all', search: '', article: null, session: null, adminUser: null, reactions: {}, visitorId: getVisitorId(), existingAttachments: [], editingId: null };
+
+    function getVisitorId(){
+      try { let id = localStorage.getItem('tcc_visitor_id'); if(!id){ id = crypto.randomUUID(); localStorage.setItem('tcc_visitor_id', id); } return id; }
+      catch { return crypto.randomUUID(); }
+    }
+    function esc(value=''){ return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+    function dateLabel(value){ if(!value) return 'JUST PUBLISHED'; return new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric'}).format(new Date(value)); }
+    function slugify(value){ return String(value).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,90) || 'article'; }
+    function fileNameSafe(name){ return String(name).replace(/[^a-zA-Z0-9._-]+/g,'-').slice(-110); }
+    function publicUrl(path){ if(!path || !supabase) return ''; return supabase.storage.from(BUCKET).getPublicUrl(path).data.publicUrl; }
+    function imageFor(article){ return article.cover_path ? publicUrl(article.cover_path) : ''; }
+    function authorLine(article){ return `${esc(article.author || 'The Capitalism Chronicle')} · ${dateLabel(article.published_at || article.created_at)}`; }
+    function categoryTag(category){ return `<span class="category-label">${esc(category || 'News')}</span>`; }
+    function setNavActive(category){ document.querySelectorAll('#nav-links a').forEach(a=>a.classList.toggle('active',(a.dataset.category||'all')===category)); }
+    function setTicker(text){ document.getElementById('ticker-text').textContent = text; }
+    function getArticleHref(article){ return `?article=${encodeURIComponent(article.slug)}`; }
+    function cardMarkup(article){
+      const img = imageFor(article);
+      return `<article class="story-card"><a href="${getArticleHref(article)}" data-open-article="${esc(article.slug)}">${img ? `<img loading="lazy" src="${esc(img)}" alt="${esc(article.title)}">` : `<div style="height:190px;background:linear-gradient(135deg,#24221e,#80652f);display:grid;place-items:center;color:#e8cb7a;font:700 22px Georgia,serif">THE CHRONICLE</div>`}</a><div class="story-card-copy"><div class="story-meta"><strong>${esc(article.category)}</strong><span>${dateLabel(article.published_at)}</span></div><h3><a href="${getArticleHref(article)}" data-open-article="${esc(article.slug)}">${esc(article.title)}</a></h3><p>${esc(article.excerpt || '')}</p><div class="story-meta"><span>By ${esc(article.author || 'The Chronicle')}</span><span>Read story →</span></div></div></article>`;
+    }
+    function emptyMarkup(title='No stories yet', message='Published articles will appear here. Check back soon for the latest from The Capitalism Chronicle.'){ return `<div class="empty-state"><h3>${esc(title)}</h3><p>${esc(message)}</p></div>`; }
+    function bodyMarkup(text){ return String(text||'').split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean).map(p=>`<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join(''); }
+    function attachmentMarkup(items=[]){
+      if(!Array.isArray(items) || !items.length) return '';
+      return `<div class="article-media">${items.map(item=>{ const url=publicUrl(item.path); const type=item.type || ''; if(type.startsWith('video/')) return `<video controls preload="metadata"><source src="${esc(url)}" type="${esc(type)}">Your browser does not support embedded video.</video>`; if(type.startsWith('image/')) return `<img loading="lazy" src="${esc(url)}" alt="${esc(item.name)}">`; return `<a class="file-link" href="${esc(url)}" target="_blank" rel="noopener">↧ &nbsp;${esc(item.name || 'Download attachment')}</a>`; }).join('')}</div>`;
+    }
+    async function loadArticles(){
+      if(!supabase){ state.articles=[]; render(); return; }
+      main.innerHTML='<div class="loading">Loading the latest stories...</div>';
+      const {data,error}=await supabase.from('articles').select('*').eq('status','published').order('published_at',{ascending:false,nullsFirst:false}).order('created_at',{ascending:false});
+      if(error){ main.innerHTML=`<div class="empty-state"><h3>We could not load the newsroom</h3><p>${esc(error.message)}. Check the setup instructions and database connection.</p></div>`; return; }
+      state.articles=data||[];
+      await loadReactionCounts(state.articles.map(a=>a.id));
+      render();
+    }
+    async function loadReactionCounts(ids){
+      state.reactions={}; if(!supabase || !ids.length) return;
+      const {data}=await supabase.from('article_reactions').select('article_id,emoji').in('article_id',ids);
+      (data||[]).forEach(r=>{ if(!state.reactions[r.article_id]) state.reactions[r.article_id]={}; state.reactions[r.article_id][r.emoji]=(state.reactions[r.article_id][r.emoji]||0)+1; });
+    }
+    function renderHome(){
+      const articles=state.articles;
+      if(!articles.length){ main.innerHTML=`<div class="section-heading"><div><span class="eyebrow">Independent reporting</span><h2>THE LATEST</h2></div></div>${isConfigured?emptyMarkup():setupPublicNotice()}`; return; }
+      const featured=articles.find(a=>a.is_featured)||articles[0];
+      const rest=articles.filter(a=>a.id!==featured.id);
+      const side=rest.slice(0,3); const latest=rest.slice(3);
+      const heroImg=imageFor(featured);
+      main.innerHTML=`<div class="section-heading"><div><span class="eyebrow">The stories shaping the world</span><h2>TOP STORY</h2></div><span class="muted" style="font-size:10px;letter-spacing:.1em">LATEST EDITION</span></div>
+        <section class="home-grid"><article class="hero-card">${heroImg?`<img class="hero-image" src="${esc(heroImg)}" alt="">`:''}<div class="hero-copy">${categoryTag(featured.category)}<h1><a href="${getArticleHref(featured)}" data-open-article="${esc(featured.slug)}">${esc(featured.title)}</a></h1><p>${esc(featured.excerpt||'')}</p><div class="byline">${authorLine(featured)}</div><a class="text-link" href="${getArticleHref(featured)}" data-open-article="${esc(featured.slug)}">Read full story <span>→</span></a></div></article>
+        <div class="side-stack">${side.length?side.map(a=>`<article class="side-story">${imageFor(a)?`<img src="${esc(imageFor(a))}" alt="" loading="lazy">`:`<div style="background:#30291c"></div>`}<div class="side-story-copy"><div class="small-cat">${esc(a.category)}</div><h3><a href="${getArticleHref(a)}" data-open-article="${esc(a.slug)}">${esc(a.title)}</a></h3><div class="byline">${dateLabel(a.published_at)}</div></div></article>`).join(''):emptySideStory()}</div></section>
+        <section class="latest-section"><div class="section-heading"><div><span class="eyebrow">Across the global economy</span><h2>LATEST STORIES</h2></div><span class="muted" style="font-size:10px">${articles.length} PUBLISHED</span></div>${latest.length?`<div class="story-grid">${latest.map(cardMarkup).join('')}</div>`:side.length?`<div class="story-grid">${side.map(cardMarkup).join('')}</div>`:emptyMarkup('More reporting is on the way','New stories will appear here as they are published.')}</section>`;
+    }
+    function setupPublicNotice(){ return `<div class="setup-warning"><strong>Site setup required.</strong><br>The public homepage is ready, but it needs the Supabase project details in the <code>CONFIG</code> section of <code>index.html</code> and the database setup from <code>schema.sql</code> before it can display published articles.</div>`; }
+    function emptySideStory(){ return `<div class="empty-state" style="padding:24px 12px"><h3>More to come</h3><p>New coverage will appear here.</p></div>`; }
+    function renderCategory(category){
+      const list=state.articles.filter(a=>a.category===category);
+      const descriptions={'Markets & Economy':'Financial markets, macroeconomic trends, money and the forces moving the global economy.','Geopolitics':'Diplomacy, international power, policy and the geopolitical developments with economic consequences.','Energy & Commodities':'Oil, gas, raw materials, supply routes and the markets behind essential resources.','Business & Industry':'Companies, industrial strategy, trade, investment and the people shaping global business.'};
+      main.innerHTML=`<div class="category-intro"><h1>${esc(category)}</h1><p>${esc(descriptions[category]||'Reporting and analysis from The Capitalism Chronicle.')}</p></div>${list.length?`<div class="story-grid">${list.map(cardMarkup).join('')}</div>`:emptyMarkup('No articles in this category yet','Check back soon for new reporting in this section.')}`;
+    }
+    function renderSearch(query){
+      const q=query.toLowerCase(); const list=state.articles.filter(a=>[a.title,a.excerpt,a.content,a.category].join(' ').toLowerCase().includes(q));
+      main.innerHTML=`<div class="section-heading"><div><span class="eyebrow">The Chronicle archive</span><h2>SEARCH RESULTS</h2></div><span class="muted" style="font-size:11px">${list.length} result(s) for “${esc(query)}”</span></div>${list.length?`<div class="story-grid">${list.map(cardMarkup).join('')}</div>`:emptyMarkup('No matching stories','Try another search term or browse the four news sections.')}`;
+    }
+    async function renderArticle(slug){
+      const article=state.articles.find(a=>a.slug===slug);
+      if(!article){ main.innerHTML=emptyMarkup('Story not found','This article may have been unpublished or the link may be incorrect.'); return; }
+      state.article=article;
+      let myReaction=null;
+      if(supabase){ const {data}=await supabase.from('article_reactions').select('emoji').eq('article_id',article.id).eq('visitor_id',state.visitorId).maybeSingle(); myReaction=data?.emoji||null; }
+      const counts=state.reactions[article.id]||{};
+      const related=state.articles.filter(a=>a.id!==article.id).slice(0,4);
+      main.innerHTML=`<div class="article-layout"><article class="article-main"><div class="article-category">${esc(article.category)}</div><h1>${esc(article.title)}</h1><div class="article-excerpt">${esc(article.excerpt||'')}</div><div class="article-meta"><span>By ${esc(article.author||'The Capitalism Chronicle')}</span><span>${dateLabel(article.published_at||article.created_at)}</span><span>The Capitalism Chronicle</span></div>${imageFor(article)?`<img class="article-cover" src="${esc(imageFor(article))}" alt="${esc(article.title)}">`:''}<div class="article-body">${bodyMarkup(article.content)}</div>${attachmentMarkup(article.attachments)}<section class="reaction-box"><h3>What do you think about this story?</h3><div class="reaction-row">${EMOJIS.map(emoji=>`<button class="reaction-btn ${myReaction===emoji?'selected':''}" data-react="${emoji}" data-article="${article.id}" ${myReaction?'disabled':''} aria-label="React with ${emoji}"><span class="emoji">${emoji}</span><span class="count">${counts[emoji]||0}</span></button>`).join('')}</div><p class="reaction-note">One reaction per visitor for each story. Choose the emoji that best represents your response.</p></section></article><aside class="article-aside"><div class="aside-box"><h3>Inside the Chronicle</h3><p>Follow the forces shaping markets, international affairs, energy and global business.</p><div style="height:14px"></div>${related.length?related.map(a=>`<div class="related-item"><a href="${getArticleHref(a)}" data-open-article="${esc(a.slug)}">${esc(a.title)}</a><small>${esc(a.category)}</small></div>`).join(''):'<p>More stories coming soon.</p>'}</div></aside></div>`;
+    }
+    function render(){
+      setNavActive(state.category);
+      if(state.page==='article' && state.article){ renderArticle(state.article.slug); return; }
+      if(state.page==='category'){ renderCategory(state.category); return; }
+      if(state.page==='search'){ renderSearch(state.search); return; }
+      renderHome();
+    }
+    function goHome(){ state.page='home';state.category='all';state.article=null;history.pushState({},'',location.pathname);render();window.scrollTo(0,0); }
+    function goCategory(category){ state.page=category==='all'?'home':'category';state.category=category;state.article=null;history.pushState({},'',category==='all'?location.pathname:`?category=${encodeURIComponent(category)}`);render();window.scrollTo(0,0); }
+    async function goArticle(slug){ const article=state.articles.find(a=>a.slug===slug); if(!article)return;state.page='article';state.article=article;state.category='all';history.pushState({},'',getArticleHref(article));await renderArticle(slug);window.scrollTo(0,0); }
+    document.addEventListener('click',async e=>{
+      const categoryLink=e.target.closest('[data-category]'); if(categoryLink){e.preventDefault();goCategory(categoryLink.dataset.category);return;}
+      const articleLink=e.target.closest('[data-open-article]'); if(articleLink){e.preventDefault();await goArticle(articleLink.dataset.openArticle);return;}
+      const react=e.target.closest('[data-react]'); if(react){await submitReaction(react.dataset.article,react.dataset.react);return;}
+    });
+    document.getElementById('search-form').addEventListener('submit',e=>{e.preventDefault();const q=document.getElementById('search-input').value.trim();if(!q)return;state.page='search';state.search=q;state.category='all';history.pushState({},'',`?search=${encodeURIComponent(q)}`);render();window.scrollTo(0,0);});
+    document.getElementById('year-label').textContent=new Date().getFullYear();
+    document.getElementById('today-label').textContent=new Intl.DateTimeFormat('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(new Date()).toUpperCase();
+    document.getElementById('footer-admin').addEventListener('click',e=>{e.preventDefault();openAdmin();});
+    document.getElementById('close-admin').addEventListener('click',closeAdmin);
+    adminModal.addEventListener('click',e=>{if(e.target===adminModal)closeAdmin();});
+    window.addEventListener('popstate',()=>{const p=new URLSearchParams(location.search);if(p.has('article')){const a=state.articles.find(x=>x.slug===p.get('article'));if(a){state.page='article';state.article=a;renderArticle(a.slug);return;}}if(p.has('category')){state.page='category';state.category=p.get('category');render();return;}if(p.has('search')){state.page='search';state.search=p.get('search');render();return;}state.page='home';state.category='all';state.article=null;render();});
+
+    async function submitReaction(articleId,emoji){
+      if(!supabase)return;
+      const {error}=await supabase.from('article_reactions').insert({article_id:articleId,visitor_id:state.visitorId,emoji});
+      if(error){ if(error.code==='23505') alert('You have already reacted to this story.'); else alert('Your reaction could not be saved. Please try again.'); return; }
+      if(!state.reactions[articleId])state.reactions[articleId]={};state.reactions[articleId][emoji]=(state.reactions[articleId][emoji]||0)+1;
+      await renderArticle(state.article.slug);
+    }
+
+    function openAdmin(){adminModal.classList.remove('hidden');document.body.style.overflow='hidden';renderAdmin();}
+    function closeAdmin(){adminModal.classList.add('hidden');document.body.style.overflow='';}
+    function adminMessage(text,isError=false){return `<div class="flash ${isError?'error':''}">${esc(text)}</div>`;}
+    async function renderAdmin(message='',isError=false){
+      if(!isConfigured){adminContent.innerHTML=`${setupPublicNotice()}<div class="admin-login"><h3>Admin access</h3><p>Complete the Supabase settings in <code>index.html</code> and run <code>schema.sql</code> before signing in.</p></div>`;return;}
+      const {data:{session}}=await supabase.auth.getSession();state.session=session;state.adminUser=session?.user||null;
+      if(!session){adminContent.innerHTML=`${message?adminMessage(message,isError):''}<div class="admin-login"><div class="brand-kicker">Private newsroom access</div><h3>Welcome back.</h3><p>Sign in with the Google account authorised for The Capitalism Chronicle. Only the pre-configured administrator email can manage articles.</p><button class="google-btn" id="google-login">Continue with Google</button><div class="admin-status" id="login-status"></div></div>`;document.getElementById('google-login').addEventListener('click',googleLogin);return;}
+      if((session.user.email||'').toLowerCase()!==CONFIG.ADMIN_EMAIL.toLowerCase()){
+        await supabase.auth.signOut();adminContent.innerHTML=`<div class="admin-login"><h3>Access not authorised</h3><p>This Google account is not the designated Chronicle administrator.</p><button class="secondary-btn" id="try-again">Try another account</button></div>`;document.getElementById('try-again').addEventListener('click',()=>renderAdmin());return;
+      }
+      const {data:all,error}=await supabase.from('articles').select('*').order('updated_at',{ascending:false});
+      if(error){adminContent.innerHTML=adminMessage(`Could not load articles: ${error.message}`,true);return;}
+      adminContent.innerHTML=`${message?adminMessage(message,isError):''}<div class="admin-toolbar"><div><div class="brand-kicker">Signed in as ${esc(session.user.email)}</div><h3>Newsroom dashboard</h3></div><button class="secondary-btn" id="admin-logout">Sign out</button></div><div class="admin-toolbar"><span class="muted" style="font-size:12px">${all.length} article(s) · ${all.filter(a=>a.status==='published').length} published · ${all.filter(a=>a.status==='draft').length} drafts</span><button class="primary-btn" id="new-article">＋ New article</button></div><div id="editor-slot"></div><div class="admin-list">${all.length?all.map(a=>`<div class="admin-row"><div><h5>${esc(a.title)}</h5><small>${esc(a.category)} · <b style="color:${a.status==='published'?'#2c7956':'#9a752b'}">${esc(a.status.toUpperCase())}</b> · Updated ${dateLabel(a.updated_at)}</small></div><div class="admin-row-actions"><button class="secondary-btn" data-edit="${a.id}">Edit</button>${a.status==='draft'?`<button class="primary-btn" data-publish="${a.id}">Publish</button>`:`<button class="secondary-btn" data-unpublish="${a.id}">Unpublish</button>`}<button class="danger-btn" data-delete="${a.id}">Delete</button></div></div>`).join(''):'<div class="empty-state"><h3>Your newsroom is ready</h3><p>Create your first article to get started.</p></div>'}</div>`;
+      document.getElementById('admin-logout').addEventListener('click',async()=>{await supabase.auth.signOut();state.session=null;renderAdmin('You have signed out.');});
+      document.getElementById('new-article').addEventListener('click',()=>showEditor());
+      adminContent.querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>showEditor(all.find(a=>a.id===b.dataset.edit))));
+      adminContent.querySelectorAll('[data-publish]').forEach(b=>b.addEventListener('click',()=>changeStatus(b.dataset.publish,'published')));
+      adminContent.querySelectorAll('[data-unpublish]').forEach(b=>b.addEventListener('click',()=>changeStatus(b.dataset.unpublish,'draft')));
+      adminContent.querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>deleteArticle(b.dataset.delete)));
+    }
+    async function googleLogin(){
+      const status=document.getElementById('login-status');if(status)status.textContent='Redirecting to Google...';
+      const {error}=await supabase.auth.signInWithOAuth({provider:'google',options:{redirectTo:window.location.origin+window.location.pathname,queryParams:{prompt:'select_account'}}});
+      if(error && status)status.textContent=error.message;
+    }
+    function showEditor(article=null){
+      state.editingId=article?.id||null;state.existingAttachments=Array.isArray(article?.attachments)?article.attachments:[];
+      const slot=document.getElementById('editor-slot');
+      slot.innerHTML=`<form class="admin-form" id="article-form"><h4>${article?'Edit article':'Create a new article'}</h4><div class="field"><label for="article-title">Headline *</label><input id="article-title" required maxlength="180" value="${esc(article?.title||'')}" placeholder="Write a clear, compelling headline"></div><div class="field-grid"><div class="field"><label for="article-category">Category *</label><select id="article-category" required>${CATEGORIES.map(c=>`<option ${article?.category===c?'selected':''}>${esc(c)}</option>`).join('')}</select></div><div class="field"><label for="article-author">Author</label><input id="article-author" maxlength="90" value="${esc(article?.author||'The Capitalism Chronicle')}"></div></div><div class="field"><label for="article-excerpt">Standfirst / summary *</label><textarea id="article-excerpt" required maxlength="400" style="min-height:78px" placeholder="A concise introduction to the story...">${esc(article?.excerpt||'')}</textarea></div><div class="field"><label for="article-content">Article text *</label><textarea id="article-content" required placeholder="Write the full article. Leave a blank line between paragraphs.">${esc(article?.content||'')}</textarea><small>Plain text is supported. Separate paragraphs with a blank line.</small></div><div class="field-grid"><div class="field"><label for="article-cover">Cover image</label><input id="article-cover" type="file" accept="image/*"><small>${article?.cover_path?'A cover image is already attached. Choose a new one to replace it.':'Choose a strong landscape image for the article.'}</small></div><div class="field"><label for="article-files">Videos & other files</label><input id="article-files" type="file" multiple accept="image/*,video/*,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.txt,.csv,.zip"><small>Up to 100 MB per file. Images and videos appear in the article; other files appear as downloads.</small></div></div>${state.existingAttachments.length?`<div class="field"><label>Existing attachments</label><small>${state.existingAttachments.map(x=>esc(x.name)).join(' · ')}</small><label class="checkline"><input type="checkbox" id="remove-old-attachments"> Remove all existing attachments</label></div>`:''}<label class="checkline"><input type="checkbox" id="article-featured" ${article?.is_featured?'checked':''}> Feature this story on the homepage</label><div class="admin-actions"><button type="submit" class="primary-btn" id="save-draft">Save as draft</button><button type="button" class="secondary-btn" id="save-publish">Publish now</button><button type="button" class="secondary-btn" id="cancel-editor">Cancel</button></div><div id="editor-status"></div></form>`;
+      document.getElementById('cancel-editor').addEventListener('click',()=>{slot.innerHTML='';state.editingId=null;});
+      document.getElementById('article-form').addEventListener('submit',e=>{e.preventDefault();saveArticle('draft');});
+      document.getElementById('save-publish').addEventListener('click',()=>saveArticle('published'));
+    }
+    async function uploadFile(file){
+      if(file.size>100*1024*1024)throw new Error(`${file.name} is larger than the 100 MB limit.`);
+      const path=`articles/${crypto.randomUUID()}-${fileNameSafe(file.name)}`;
+      const {error}=await supabase.storage.from(BUCKET).upload(path,file,{cacheControl:'3600',upsert:false,contentType:file.type||'application/octet-stream'});
+      if(error)throw error;
+      return {name:file.name,path,type:file.type||'application/octet-stream',size:file.size};
+    }
+    async function saveArticle(status){
+      const statusBox=document.getElementById('editor-status');const title=document.getElementById('article-title').value.trim();const excerpt=document.getElementById('article-excerpt').value.trim();const content=document.getElementById('article-content').value.trim();
+      if(!title||!excerpt||!content){statusBox.innerHTML=adminMessage('Please complete the headline, summary and article text.',true);return;}
+      const submitButtons=document.querySelectorAll('#article-form button');submitButtons.forEach(b=>b.disabled=true);statusBox.innerHTML='<div class="loading">Saving article and uploading files...</div>';
+      try{
+        const coverFile=document.getElementById('article-cover').files[0];let coverPath=null;
+        if(state.editingId){const existing=(await supabase.from('articles').select('cover_path').eq('id',state.editingId).single()).data;coverPath=existing?.cover_path||null;}
+        if(coverFile){const uploaded=await uploadFile(coverFile);coverPath=uploaded.path;}
+        let attachments=document.getElementById('remove-old-attachments')?.checked?[]:[...state.existingAttachments];
+        const files=[...document.getElementById('article-files').files];
+        for(const file of files){attachments.push(await uploadFile(file));}
+        const now=new Date().toISOString();
+        const record={title,slug:slugify(title),category:document.getElementById('article-category').value,author:document.getElementById('article-author').value.trim()||'The Capitalism Chronicle',excerpt,content,cover_path:coverPath,attachments,status,is_featured:document.getElementById('article-featured').checked,published_at:status==='published'?now:null};
+        let result;
+        if(state.editingId){result=await supabase.from('articles').update(record).eq('id',state.editingId).select().single();}
+        else{result=await supabase.from('articles').insert(record).select().single();}
+        if(result.error)throw result.error;
+        state.editingId=null;state.existingAttachments=[];
+        await loadArticles();await renderAdmin(status==='published'?'Article published successfully.':'Draft saved successfully.');
+      }catch(error){statusBox.innerHTML=adminMessage(error.message||'Something went wrong while saving.',true);submitButtons.forEach(b=>b.disabled=false);}
+    }
+    async function changeStatus(id,status){
+      const update={status,published_at:status==='published'?new Date().toISOString():null};const {error}=await supabase.from('articles').update(update).eq('id',id);
+      if(error)renderAdmin(error.message,true);else{await loadArticles();await renderAdmin(status==='published'?'Article published.':'Article moved back to drafts.');}
+    }
+    async function deleteArticle(id){
+      if(!confirm('Delete this article permanently?'))return;
+      const {error}=await supabase.from('articles').delete().eq('id',id);
+      if(error)renderAdmin(error.message,true);else{await loadArticles();await renderAdmin('Article deleted.');}
+    }
+
+    if(supabase){
+      supabase.auth.onAuthStateChange((event,session)=>{state.session=session;if(event==='SIGNED_IN' && adminModal && !adminModal.classList.contains('hidden'))renderAdmin();});
+      const params=new URLSearchParams(location.search);
+      await loadArticles();
+      if(params.has('article')){const a=state.articles.find(x=>x.slug===params.get('article'));if(a){state.page='article';state.article=a;await renderArticle(a.slug);}}
+      else if(params.has('category')){state.page='category';state.category=params.get('category');render();}
+      else if(params.has('search')){state.page='search';state.search=params.get('search');render();}
+    }else{render();}
+  </script>
+</body>
+</html>
